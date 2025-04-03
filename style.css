@@ -1,0 +1,1218 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white; /* Changed text color to white */
+    overflow: hidden; /* Prevent scrollbars for the animation */
+}
+
+header {
+    background-color: #007bff;
+    color: white; /* Changed text color to white */
+    padding: 1rem;
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin: 1rem auto;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    animation: fadeInImage 2s ease-in-out forwards;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    text-align: center;
+    color: white; /* Changed text color to white */
+}
+
+.section-buttons {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.section-buttons button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0.5rem;
+    font-size: 1rem;
+}
+
+.section-buttons button:hover {
+    background-color: #218838;
+}
+
+/* Position "Click Me" button at the top-left corner */
+.top-left-button {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: #00008b; /* Dark blue color */
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.top-left-button:hover {
+    background-color: #000066; /* Darker blue on hover */
+}
+
+/* Style for the "Like Image" button */
+.like-button {
+    display: block;
+    margin: 1rem auto;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.like-button:hover {
+    background-color: #e64a19;
+}
+
+/* Butterfly styles */
+.butterfly {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(45deg, #ff69b4 50%, #ff1493 50%);
+    border-radius: 50%;
+    display: none;
+    animation: fly 4s ease-in-out infinite;
+    z-index: 10;
+}
+
+.butterfly::before,
+.butterfly::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(45deg, #ff69b4 50%, #ff1493 50%);
+    border-radius: 50%;
+}
+
+.butterfly::before {
+    top: -25px;
+    left: -25px;
+    transform: rotate(-45deg);
+}
+
+.butterfly::after {
+    top: -25px;
+    right: -25px;
+    transform: rotate(45deg);
+}
+
+@keyframes fly {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    50% {
+        transform: translate(-40%, -60%) rotate(20deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+
+/* Birthday animation styles */
+.birthday-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #ff0;
+    animation: fall 3s linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100vh) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+/* Smile and voice animation styles */
+.beautiful-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes textZoom {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.smile-text {
+    animation: textZoom 2s ease-in-out;
+    margin-bottom: 1rem;
+}
+
+.voice-text {
+    animation: textZoom 3s ease-in-out;
+}
+
+/* Most beautiful in the world animation styles */
+.things-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.most-beautiful-text {
+    animation: textZoom 3s ease-in-out;
+}
+
+/* Background image animation styles */
+.background-image-container {
+    position: relative;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.background-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    opacity: 0;
+    animation: fadeInImage 3s ease-in-out forwards;
+    border-radius: 10px;
+}
+
+@keyframes fadeInImage {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Image folder styles */
+.image-folder {
+    display: none;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.image-folder img {
+    margin: 0.5rem;
+    max-width: 200px;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+}
+
+/* Image viewer styles */
+.image-viewer {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+}
+
+.image-viewer img {
+    max-width: 90%;
+    max-height: 90%;
+    border: 5px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Night background animation styles */
+.night-background {
+    display: none;
+}
+
+/* Beautiful natural background animation */
+@keyframes beautifulNature {
+    0% {
+        background: linear-gradient(to bottom, #87CEEB, #FFD700); /* Sky blue to golden */
+    }
+    50% {
+        background: linear-gradient(to bottom, #FFA07A, #32CD32); /* Light salmon to lime green */
+    }
+    100% {
+        background: linear-gradient(to bottom, #87CEEB, #FFD700); /* Sky blue to golden */
+    }
+}
+
+.nature-background {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: beautifulNature 15s infinite;
+    z-index: -1;
+}
+
+/* Cute Animation styles */
+.cute-animation {
+    display: none;
+    text-align: center;
+    margin-top: 2rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.cute-animation img {
+    margin-top: 1rem;
+    max-width: 300px;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+}
+
+/* Three-bar button styles */
+.three-bar-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.5rem;
+}
+
+.three-bar-button:hover {
+    background-color: #0056b3;
+}
+
+/* Menu styles */
+.menu {
+    position: absolute;
+    top: 3rem;
+    right: 1rem;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li {
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.menu ul li:last-child {
+    border-bottom: none;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.menu ul li a:hover {
+    color: #0056b3;
+}
+
+#loginContainer {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+}
+
+/* Intro animation */
+@keyframes introFadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.intro-animation {
+    animation: introFadeIn 2s ease-in-out;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-top: 2rem;
+}
+
+/* Image side animation */
+@keyframes sideSlide {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(10%);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.image-side-animation {
+    animation: sideSlide 2s ease-in-out;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border: 3px solid #007bff;
+    margin: 1rem auto;
+    display: block;
+}
+
+/* Liking Place button styles */
+.liking-place-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.liking-place-button:hover {
+    background-color: #0056b3;
+}
+
+/* Map animation logo styles */
+.map-logo {
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 2px solid #007bff;
+    border-radius: 50%;
+    position: relative;
+    animation: pulse 1.5s infinite;
+}
+
+.map-logo::after {
+    content: '📍';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    color: #007bff;
+}
+
+/* Animation logo for Memories button */
+.memories-logo {
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 2px solid #28a745;
+    border-radius: 50%;
+    position: relative;
+    animation: pulse 1.5s infinite;
+}
+
+.memories-logo::after {
+    content: '💭';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    color: #28a745;
+}
+
+/* Animation logo for Thing button */
+.thing-logo {
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 2px solid #007bff;
+    border-radius: 50%;
+    position: relative;
+    animation: spin 2s linear infinite;
+}
+
+.thing-logo::after {
+    content: '✨';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    color: #007bff;
+}
+
+/* Animation logo for Beautiful button */
+.beautiful-logo {
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 2px solid #ff69b4;
+    border-radius: 50%;
+    position: relative;
+    animation: bounce 1.5s infinite;
+}
+
+.beautiful-logo::after {
+    content: '🌸';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    color: #ff69b4;
+}
+
+/* Animation logo for Three Bar button */
+.three-bar-logo {
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 2px solid #00008b;
+    border-radius: 50%;
+    position: relative;
+    animation: rotate 2s linear infinite;
+}
+
+.three-bar-logo::after {
+    content: '☰';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    color: #00008b;
+}
+
+/* Animation logo for Click Me button */
+.click-me-logo {
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 2px solid #ff5722;
+    border-radius: 50%;
+    position: relative;
+    animation: pulse 1.5s infinite;
+}
+
+.click-me-logo::after {
+    content: '🖱️';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    color: #ff5722;
+}
+
+/* Animation logo for Instagram Access button */
+.instagram-access-button {
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #E1306C; /* Instagram pink */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.instagram-access-button:hover {
+    background: #C13584; /* Darker Instagram pink on hover */
+}
+
+.instagram-logo {
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 2px solid #E1306C;
+    border-radius: 50%;
+    position: relative;
+    animation: pulse 1.5s infinite;
+}
+
+.instagram-logo::after {
+    content: '📷';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    color: #E1306C;
+}
+
+/* Keyframes for animations */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Romantic Video Container */
+.romantic-video-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    flex-direction: column;
+}
+
+.romantic-video-container video {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.close-video-button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Remove dashboard animation styles */
+.romantic-dashboard-container {
+    display: none;
+}
+
+/* Static Text Container */
+.static-text-container {
+    text-align: center;
+    margin-top: 2rem;
+    background: none;
+    color: #00008b;
+}
+
+.static-text {
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: none;
+}
+
+/* Static Text Container */
+.animated-text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #ff7eb3, #ff758c);
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.static-text {
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px #ff758c, 0 0 20px #ff758c, 0 0 30px #ff758c;
+}
+
+/* Couple Life Dashboard */
+.couple-life-dashboard {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+}
+
+.dashboard-content {
+    background: #ffffff;
+    color: #333;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.dashboard-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #007bff;
+}
+
+.dashboard-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dashboard-content ul li {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.dashboard-content ul li span {
+    font-size: 2rem;
+}
+
+.close-dashboard-button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-dashboard-button:hover {
+    background: #0056b3;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Settings Button */
+.settings-button {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    animation: pulseSettings 2s infinite;
+}
+
+.settings-button:hover {
+    background-color: #0056b3;
+}
+
+.settings-logo {
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 2px solid #007bff;
+    border-radius: 50%;
+    position: relative;
+    animation: rotateSettings 2s linear infinite;
+}
+
+.settings-logo::after {
+    content: '⚙️';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    color: #007bff;
+}
+
+@keyframes rotateSettings {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulseSettings {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Login Dashboard */
+.login-dashboard {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.login-dashboard-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    animation: scaleUp 0.5s ease-in-out;
+}
+
+.login-dashboard-content h2 {
+    margin-bottom: 1rem;
+    color: #007bff;
+}
+
+.login-dashboard-content input {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-dashboard-content button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-dashboard-content button:hover {
+    background: #0056b3;
+}
+
+/* Beautiful animation logo for login dashboard */
+.login-dashboard-logo {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 1rem;
+    background: linear-gradient(45deg, #007bff, #00d4ff);
+    border-radius: 50%;
+    position: relative;
+    animation: spinAndGlow 3s infinite ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5), 0 0 20px rgba(0, 212, 255, 0.5);
+}
+
+.login-dashboard-logo::before {
+    content: '🔒';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: white;
+}
+
+@keyframes spinAndGlow {
+    0%, 100% {
+        transform: rotate(0deg) scale(1);
+        box-shadow: 0 0 10px rgba(0, 123, 255, 0.5), 0 0 20px rgba(0, 212, 255, 0.5);
+    }
+    50% {
+        transform: rotate(180deg) scale(1.2);
+        box-shadow: 0 0 15px rgba(0, 123, 255, 0.7), 0 0 30px rgba(0, 212, 255, 0.7);
+    }
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Animation for input fields and submit button */
+.login-dashboard input {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    animation: fadeInInput 1s ease-in-out;
+}
+
+.login-dashboard input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px #007bff;
+    animation: pulseInput 1.5s infinite;
+}
+
+@keyframes fadeInInput {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulseInput {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.login-dashboard button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: fadeInButton 1s ease-in-out;
+}
+
+.login-dashboard button:hover {
+    background: #0056b3;
+    animation: bounceButton 0.5s ease-in-out;
+}
+
+@keyframes fadeInButton {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceButton {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Reset Dashboard */
+.reset-dashboard {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.reset-dashboard-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    animation: scaleUp 0.5s ease-in-out;
+}
+
+.reset-dashboard-content h2 {
+    margin-bottom: 1rem;
+    color: #007bff;
+}
+
+.reset-dashboard-content input {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.reset-dashboard-content button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reset-dashboard-content button:hover {
+    background: #0056b3;
+}
+
+/* Search Bar Styles */
+.search-bar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+    width: 100%;
+    max-width: 600px;
+    gap: 0.5rem;
+    animation: fadeInAndSlideUp 1.5s ease-in-out;
+}
+
+@keyframes fadeInAndSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#searchInput {
+    flex: 1;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    outline: none;
+}
+
+#searchInput:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 5px #0056b3;
+}
+
+#searchButton {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+#searchButton:hover {
+    background-color: #0056b3;
+}
+
+/* Profile Photo Container */
+.profile-photo-container {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 1000;
+    animation: slideInFromRight 1s ease-in-out;
+}
+
+#profilePhotoInput {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Cute animation for profile picture view */
+.profile-photo-view {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #007bff;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    animation: cuteBounce 2s infinite;
+}
+
+@keyframes cuteBounce {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+.profile-photo-view img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes pulseProfilePhoto {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
